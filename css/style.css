@@ -1,0 +1,124 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;/*all three removes the borders ie initially present*/ 
+}
+body{
+    font-size: 20px;/*default font size for body*/
+    color: #b9a3a3;
+    overflow-x: hidden;/*extra pixels are hidden this is used so the page cannot be scrolled left or right*/
+}
+/*header is not a tag so used in this way wee use . for class # for id we use tag normally*/
+header{
+    
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('../images/background.JPG');
+    background size: cover
+    background-repeat: no repeat;/*while using in mobile the backgrnd will not repeat */
+   
+    height: 100vh;/*gives the size of the image 100vh means it covers whole screen*/
+    
+
+}
+.clearfix::after{/*here after signifies that the image and other tthings load first and then the contemt is displayed so we use the content*/
+    content:".";
+    visibility:hidden;
+    display: block;/*means whole content is shown in one line*/
+    height:0px;
+    clear: both;
+}
+/*row is a class so we use .row  */
+.row{
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.logo{
+    height: 120px;
+    width: auto;
+    float: left;
+    margin-top: 20px;
+}
+
+.main-nav{
+    float: right;
+    margin-top: 20px;
+}
+
+.main-nav li{
+    display: inline-block;/*side to side list*/
+    list-style: none;
+    margin-left: 40px;/*distance between each list element*/
+}
+
+.main-nav li{
+    padding: 5px 0;
+    text-decoration:none;
+    text-transform: uppercase;
+    font-size: 90%;
+    font-weight: 100px;
+    color: blanchedalmond;
+}
+
+.main-nav li:hover{
+ border-bottom: 2px solid rgb(202, 202, 202)
+ 
+
+}
+
+
+.main-content-header{
+    width: 1180px;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+h2{
+    color: #ffffff83;
+    word-spacing :3px ;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+
+}
+
+h3{
+    color: #ffffffc9;
+    word-spacing :3px ;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+
+}
+
+.btn{
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: lighter;
+    border-radius: 200px;
+    transition: background-color 0.2s,border 0.2s,color 0.2s;
+   
+}
+
+.btn-full{
+    background-color:transparent;
+    color: wheat;
+    margin-right: 15px;
+    border: 1px solid wheat;
+}
+
+.btn-full:hover{
+    background-color: #00000000;
+    
+}
+
+.colorchange{
+    animation: quote 1s infinite;
+}
+@keyframes quote{
+    0%{color:rgb(189, 174, 174);}
+    25%{color:rgb(23, 79, 153);}
+    50%{color:rgb(236, 220, 220);}
+    100%{color:rgb(23, 79, 153);;}
+}
